@@ -1,27 +1,35 @@
 # Investr
+This project uses `Angular 7/8` and `Typescript` for Frontend and `json-server` to mock the data.
+Please note that this project has been created as a showcase POC and is NOT currently bootstrapped/deployed.
+The project is ONLY avaliable for the purpose of evaluation of my coding and development skills
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+# How to RUN
+  1. Download the project from https://github.com/TheRungtaLibrary/investr
+  2. Unzip and Open a Command Line/Terminal and traverse at ROOT directory.
+      For example, my ROOT of the project is `C:\Users\t.rungta\Downloads\investr`
+  3. RUN `npm install` to install all dependencies specified in PACKAGE.JSON. This step is VERY IMPORTANT
+  4. Run `json-server --watch server/projects.json` in the same terminal. The `Projects data` mocked service starts at `http://localhost:3000/projects`
+  5. Open another Command Line/Terminal at ROOT directory and run `ng serve --open`
+  6. The INVESTR application will now open in browser at `http://localhost:4200/`
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# The Application consists of -
+## Views
+  - Registration View for user registration
+  - Login View for user login
+  - Home module to display all projects which CAN BE bid by the user
+  - MyProfile view to display user details and projects invested
+  - Amounts are displayed in German Locale
+  
+## Authentication and Validations -
+  - All fields in Login and Registration Views validate user input
+  - User Login is authenticated by `JWT TOKEN`
+  - ALERTS are displayed on successful/failed login and investment
+  - User CAN ONLY invest an amount between 100€-10.000€ which is including validated
+  - ALL Validations display appropriate messages for the user
+  
+## Server -
+  - The USER registration and login data uses `LocalStorage` of the browser
+  - The Projects data is mocked by `json-server` utility
+  
+## Resonsiveness and Styling
+The Applcation is responsive and is styled using `Bootstrap` utility
