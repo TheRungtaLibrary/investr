@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card card-size">
+        <img src="assets/images/user.png" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Profile details</h5>
+          <p class="card-text">First name: {{currentUser.firstName}}</p>
+          <p class="card-text">Last name: {{currentUser.lastName}}</p>
+          <p class="card-text">Email: {{currentUser.email}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="d-flex justify-content-center" *ngIf="loading">
+        <div class="spinner-border spinner-border-lg" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <h1 *ngIf="!loading">My Investments</h1>
+      <hr>
+      <div class="row">
+        <div *ngFor="let project of projects">
+          <app-card
+            [project]="project"
+            [user]="currentUser"
+            [editable]="false"
+          ></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

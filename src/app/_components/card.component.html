@@ -1,0 +1,33 @@
+﻿<div class="col-sm mb-3">
+  <div class="card card-size">
+    <div class="card-body">
+      <h5 class="card-title">{{project.name}}</h5>
+      <p class="card-text">Investment required: {{project.investmentTotal | number:'6.0-0':'de'}}&euro;</p>
+      <p class="card-text">Rate of returns: {{project.investmentRate}}%</p>
+      <p class="card-text">Duration: {{project.investmentDurationMonths}} months</p>
+      <form [formGroup]="investForm" (ngSubmit)="onSubmit()" *ngIf="editable">
+        <div class="form-group">
+          <input
+            type="number"
+            formControlName="investment"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.investment.errors }"
+            placeholder="Invest between 100€-10.000€"
+          />
+          <div *ngIf="submitted && f.investment.errors" class="invalid-feedback">
+            <div *ngIf="f.investment.errors.required">An valid amount is required</div>
+            <div *ngIf="f.investment.errors.min">Amount should be between 100€-10.000€</div>
+            <div *ngIf="f.investment.errors.max">Amount should be between 100€-10.000€</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Click to invest
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

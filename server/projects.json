@@ -1,0 +1,57 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Modern Apartments, Koln",
+      "investmentTotal": 1620000,
+      "investmentRate": 6.5,
+      "investmentDurationMonths": 22,
+      "investments": []
+    },
+    {
+      "id": 2,
+      "name": "Office Floor, Berlin",
+      "investmentTotal": 1635000,
+      "investmentRate": 5.8,
+      "investmentDurationMonths": 14,
+      "investments": []
+    },
+    {
+      "id": 3,
+      "name": "Family Hotel, Potsdam",
+      "investmentTotal": 1000000,
+      "investmentRate": 4.1,
+      "investmentDurationMonths": 8,
+      "investments": []
+    },
+    {
+      "id": 4,
+      "name": "Modern Living, Munich",
+      "investmentTotal": 680000,
+      "investmentRate": 5.2,
+      "investmentDurationMonths": 24,
+      "investments": []
+    },
+    {
+      "id": 5,
+      "name": "Serviced Apartments, Ulm",
+      "investmentTotal": 2500000,
+      "investmentRate": 5.7,
+      "investmentDurationMonths": 25,
+      "investments": []
+    },
+    {
+      "id": 6,
+      "name": "Resort and Spa, Mallorca",
+      "investmentTotal": 2130000,
+      "investmentRate": 5.8,
+      "investmentDurationMonths": 23,
+      "investments": [
+        {
+          "investorId": 3,
+          "amount": 800
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+﻿<div class="container">
+  <div class="row">
+    <div *ngFor="let project of projects">
+        <app-card
+          [project]="project"
+          [user]="currentUser"
+          [editable]="true"
+          (isProjectListUpdated)="onProjectListUpdate($event)"
+        ></app-card>
+    </div>
+  </div>
+</div>
