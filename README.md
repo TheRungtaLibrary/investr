@@ -9,7 +9,7 @@ The project is ONLY avaliable for the purpose of evaluation of my coding and dev
       For example, my ROOT of the project is `C:\Users\t.rungta\Downloads\investr`
   3. RUN `npm install` to install all dependencies specified in PACKAGE.JSON. This step is VERY IMPORTANT
   4. Run `json-server --watch server/projects.json` in the same terminal. The `Projects data` mocked service starts at `http://localhost:3000/projects`
-  5. Open another Command Line/Terminal at ROOT directory and run `npm install`
+  5. Open another Command Line/Terminal at ROOT directory and run `npm start`
   6. The INVESTR application will open in a browser tab at `http://localhost:4200/`
 
 # The Application consists of -
