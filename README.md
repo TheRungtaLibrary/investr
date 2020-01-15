@@ -24,7 +24,7 @@ The project is ONLY avaliable for the purpose of evaluation of my coding and dev
   - All fields in Login and Registration Views validate user input
   - User Login is authenticated by `JWT TOKEN`
   - ALERTS are displayed on successful/failed login and investment
-  - User CAN ONLY invest an amount between 100€-10.000€ which is including validated
+  - User can ONLY invest an amount between 100€-10.000€ which is including validated
   - ALL Validations display appropriate messages for the user
   
 ## Server -
